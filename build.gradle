@@ -23,6 +23,13 @@ dependencies {
 	exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	//Lombok
+	annotationProcessor 'org.projectlombok:lombok'
+	compileOnly 'org.projectlombok:lombok'
+
+	//Devtoos
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('test') {
