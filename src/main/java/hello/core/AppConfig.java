@@ -38,5 +38,8 @@ public class AppConfig {
     return new MemoryMemberRepository();
   }
 
-
+  @Bean
+  public DiscountPolicy discountPolicy() {
+    return new RateDiscountPolicy();
+  }
 }
