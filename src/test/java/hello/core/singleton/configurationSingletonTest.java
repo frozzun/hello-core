@@ -36,6 +36,7 @@ public class configurationSingletonTest {
     AppConfig bean = ac.getBean(AppConfig.class);
 
     System.out.println("bean = " + bean.getClass());
+
     //출력: bean = class hello.core.AppConfig$$SpringCGLIB$$0
   }
 }
