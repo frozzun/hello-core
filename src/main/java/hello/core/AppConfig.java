@@ -12,15 +12,12 @@ import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- *
- *
- * @filename : AppConfig.java
- * @author frozzun
- * @since 11/04/24
- */
 @Configuration
 public class AppConfig {
+
+  // @Bean memberService -> new MemoryMemberRepository()
+  // @Bean orderService -> new MemoryMemberRepository()
+
   @Bean
   public MemberService memberService() {
     return new MemberServiceImpl(memberRepository());

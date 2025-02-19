@@ -1,18 +1,9 @@
 package hello.core.order;
 
 import hello.core.discount.DiscountPolicy;
-import hello.core.discount.FixDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
-import hello.core.member.MemoryMemberRepository;
 
-/**
- *
- *
- * @filename : OrderServiceImpl.java
- * @author frozzun
- * @since 11/06/24
- */
 public class OrderServiceImpl implements OrderService {
 
   private final MemberRepository memberRepository;
@@ -28,5 +19,10 @@ public class OrderServiceImpl implements OrderService {
     Member member = memberRepository.findById(memberId);
     int discountPrice = discountPolicy.discount(member, itemPrice);
     return new Order(memberId, itemName, itemPrice, discountPrice);
+  }
+
+  //테스트 용도
+  public MemberRepository getMemberRepository() {
+    return memberRepository;
   }
 }
